@@ -1,0 +1,36 @@
+{
+  "name": "Youtube-Adapter",
+  "version": "0.0.0",
+  "authors": [
+    "To The New"
+  ],
+  "description": "\"Youtube-Adapter\"",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "Youtube-Adapter",
+    "testing",
+    "Veritone",
+    "karma",
+    "jasmine\""
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.2",
+    "angular-mocks": "~1.4.2",
+    "jquery": "~2.1.4",
+    "angular-bootstrap": "~0.13.3",
+    "angular-animate": "~1.4.3"
+  },
+  "dependencies": {
+    "angular-ui-router": "^0.3.1"
+  }
+}

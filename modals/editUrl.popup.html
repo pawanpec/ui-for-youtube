@@ -1,0 +1,35 @@
+<div class="popup correcturl-popup">
+    <h2>Current Url Issues <span class="fa fa-times" ng-click="EditPopup.cancel()"></span></h2>
+
+    <p ng-if="EditPopup.urls.length">Correct or remove the list of current url issues below, when all issues are corrected click fix issues</p>
+    <table ng-if="EditPopup.urls.length">
+        <thead>
+        <th>
+            Url
+        </th>
+        <th>Status</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="url in EditPopup.urls">
+            <td>
+                <input type="text" ng-model="url.value" ng-if="url.edit" ng-change="EditPopup.validate(url)" class="input-width">
+                <span ng-if="!url.edit" ng-bind="url.value"></span>
+                <span ng-if="!url.isValid" class="fa fa-pencil" ng-click="url.edit=true"></span>
+            </td>
+            <td>
+                <span ng-if="!url.isValid" class="fa fa-exclamation-triangle"></span>
+                <span ng-if="url.isValid" class="fa fa-check"></span>
+                <span class="fa fa-trash" ng-click="EditPopup.delete($index)"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p ng-if="!EditPopup.urls.length">There is no urls</p>
+    <div class="clearfix popup-bottom">
+        <a class="remove-affected pointer font-size-11" ng-click="EditPopup.removeAllAffectedUrls()">Remove Affected URL(s)</a>
+        <div class="popup-buttons clearfix">
+            <button ng-click="EditPopup.cancel()">Cancel</button>
+            <button class="fix-issues" ng-click="EditPopup.ok()">Fix Issues</button>
+        </div>
+    </div>
+</div>

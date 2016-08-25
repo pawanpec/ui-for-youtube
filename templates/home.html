@@ -1,0 +1,38 @@
+<div class="content">
+    <div class="globe-icon">
+        <img src="assets/images/globe.png" alt="image" class="globe"/>
+    </div>
+    <h1>Copy and Paste URL(s) Below</h1>
+    <p>Copy and paste the one or multiple URLs separated by commas.</p>
+    <textarea placeholder="Add URL here..." rows="7" class="input-links" ng-model="Home.url"
+              ng-if="!Home.urls.length"></textarea>
+    <div class="url-field" ng-if="Home.urls && Home.urls.length">
+        <ul>
+            <li ng-repeat="url in Home.urls">
+                <input type="text" placeholder="Enter url here..." class="url-input"
+                       ng-change="Home.changeUrl(url,$index)" ng-model="url.value"/>
+                <span ng-if="url.isValid" class="icon-check sprite"></span>
+                <span ng-if="!url.isValid" class="alert-small sprite"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom-line">
+        <a href="" class="upload">.CVS Upload</a>
+        <button class="add-url" ng-click="Home.validateUrls()"
+                ng-disabled="(!Home.url) || Home.urls.length">Add URL
+        </button>
+    </div>
+</div>
+<div class="alert clearfix" ng-if="Home.invalidUrls.length">
+    <div class="alert-left">
+        <span class="sprite alert-big"></span>
+    </div>
+    <div class="alert-right">
+        <h5>We have detected {{Home.invalidUrls.length}} URL(s) have errors. what would you like to do?</h5>
+        <div class="buttons clearfix">
+            <a class="remove-affected pointer" ng-click="Home.removeAllInvalidUrls()">Remove affeted URLs</a>
+            <button class="correct-affected pointer" ng-click="Home.editUrls()">Correct Affected URLs</button>
+        </div>
+    </div>
+</div>
+<button class="pointer rfloat" ng-click="Home.postUrls()" ng-disabled="Home.isNextDisabled">Next</button>

@@ -1,0 +1,12 @@
+# .idea
+.idea
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Dependency directory
+node_modules/
+
+# Bower
+bower_components/
+
