@@ -11,8 +11,8 @@
                 // HOME STATE
                 .state('home', {
                     url: '/home',
-                    templateUrl: 'templates/home.html',
-                    controller: 'HomeCtrl as Home'
+                    //templateUrl: 'templates/home.html',
+                    //controller: 'HomeCtrl as Home'
                 })
         }]);
 })(window.angular);
