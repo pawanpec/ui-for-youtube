@@ -69,7 +69,11 @@
              */
             Home.postUrls = function () {
                 if (Home.validatedUrls && Home.validatedUrls.length) {
-                    console.log('Validated urls-------------------------', Home.validatedUrls);
+                    $scope.adapterProperties = $scope.adapterProperties || {};
+
+                    $scope.adapterProperties.urls = Home.validatedUrls;
+
+                    console.log('Validated urls-------------------------', $scope.adoapterProperty);
                 }
             };
             /**

@@ -6,7 +6,12 @@
 
             return {
                 restrict: 'E',
-                scope: {},
+                scope: {
+                    ingestionType: '=',
+                    sourceIngestion: '=',
+                    adapterData: '=',
+                    adapterProperties: '='
+                },
                 templateUrl: 'templates/home.html',
                 controller: 'HomeCtrl',
                 controllerAs: 'Home',
