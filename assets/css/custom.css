@@ -468,13 +468,13 @@ a:hover, a:active, a:focus{
 th{
     color: #aeaeae;
 }
-.correcturl-popup td span.fa-pencil{
+.correcturl-popup td span.edit-icon{
     display: none;
     position: absolute;
     right: 0;
     top: 9px;
 }
-.correcturl-popup td:hover span.fa-pencil{
+.correcturl-popup td:hover span.edit-icon{
     display: block;
 }
 .popup table th, .popup table td{
@@ -579,6 +579,28 @@ button.fix-issues{
     float: right;
     margin-top: -5px;
 }
+.trash-icon{
+    background-position: -35px -29px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: right;
+    margin: -5px 0px 0px 20px;
+}
+.edit-icon{
+    background-position: -44px 0px;
+    width: 20px;
+    height: 20px;
+}
+.popup .alert-small{
+    float: none;
+}
+.popup .icon-check{
+    float: none;
+}
+.popup .url-view{
+    min-width: 493px;
+}
 table{
     width: 100%;
 }
@@ -599,10 +621,25 @@ table{
     margin-top: 1%;
     height: 23px;
 }
-
+.button-disabled{
+    background: #928B8B;
+    color: #373737;
+}
 @media (max-width: 699px){
     .content, .alert{
         width: 90%;
+    }
+    .alert{
+        height: auto;
+    }
+    .url-input{
+        max-width: 80%;
+    }
+    .alert-left{
+        height: 92px;
+    }
+    .alert-big{
+        margin: 28px auto;
     }
     .alert-right{
         padding: 5px;
@@ -613,5 +650,16 @@ table{
     .correct-affected{
         padding: 6px 52px;
         margin-top: 5px;
+    }
+    .popup{
+        width: auto;
+    }
+    .popup .url-view{
+        min-width: 240px;
+        max-width: 240px;
+        overflow: hidden;
+    }
+    .popup button{
+        padding: 8px 10px;
     }
 }

@@ -35,4 +35,4 @@
         </div>
     </div>
 </div>
-<button class="pointer rfloat" ng-click="Home.postUrls()" ng-disabled="Home.isNextDisabled">Next</button>
+<button class="pointer rfloat" ng-class="{'button-disabled':Home.isNextDisabled}" ng-click="Home.postUrls()" ng-disabled="Home.isNextDisabled">Next</button>

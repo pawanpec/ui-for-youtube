@@ -11,15 +11,16 @@
         </thead>
         <tbody>
         <tr ng-repeat="url in EditPopup.urls">
-            <td>
+            <td class="url-view">
                 <input type="text" ng-model="url.value" ng-if="url.edit" ng-change="EditPopup.validate(url)" class="input-width">
                 <span ng-if="!url.edit" ng-bind="url.value"></span>
-                <span ng-if="!url.isValid" class="fa fa-pencil" ng-click="url.edit=true"></span>
+                <span ng-if="!url.isValid" class="sprite edit-icon" ng-click="url.edit=true"></span>
+
             </td>
             <td>
-                <span ng-if="!url.isValid" class="fa fa-exclamation-triangle"></span>
-                <span ng-if="url.isValid" class="fa fa-check"></span>
-                <span class="fa fa-trash" ng-click="EditPopup.delete($index)"></span>
+                <span class="sprite trash-icon" ng-click="EditPopup.delete($index)"></span>
+                <span ng-if="url.isValid" class="icon-check sprite"></span>
+                <span ng-if="!url.isValid" class="alert-small sprite"></span>
             </td>
         </tr>
         </tbody>
