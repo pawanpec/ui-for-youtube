@@ -10,7 +10,8 @@
                     ingestionType: '=',
                     sourceIngestion: '=',
                     adapterData: '=',
-                    adapterProperties: '='
+                    adapterProperties: '=',
+                    adapterFunction: '&'
                 },
                 templateUrl: 'templates/home.html',
                 controller: 'HomeCtrl',

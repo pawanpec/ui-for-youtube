@@ -73,7 +73,8 @@
 
                     $scope.adapterProperties.urls = Home.validatedUrls;
 
-                    console.log('Validated urls-------------------------', $scope.adoapterProperty);
+                    console.log('Validated urls-------------------------', $scope.adapterProperties);
+                    $scope.adapterFunction({urls: Home.validatedUrls});
                 }
             };
             /**
