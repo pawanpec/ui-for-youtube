@@ -12,7 +12,7 @@
                         adapterData: '=',
                         adapterProperties: '='
                     },
-                    templateUrl: '../ui-for-youtube/components/home.html',
+                    templateUrl: 'components/home.html',
                     controller: HomeCtrl,
                     controllerAs: 'Home',
                     link: link
