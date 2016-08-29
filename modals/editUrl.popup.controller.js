@@ -1,7 +1,7 @@
 (function (angular) {
     angular
         .module('youtubeAdapter')
-        .controller('EditPopupCtrl', ['urls', 'Utils', '$modalInstance', function (urls, Utils, $modalInstance) {
+        .controller('EditPopupCtrl', ['urls', 'Utils', '$uibModalInstance', function (urls, Utils, $uibModalInstance) {
             var EditPopup = this;
             /**
              * initialize the EditPopup.urls with urls
@@ -36,10 +36,10 @@
                         if (url && url.isValid && url.value)
                             filteredUrls.push(url);
                     });
-                    $modalInstance.close(filteredUrls);
+                    $uibModalInstance.close(filteredUrls);
                 }
                 else {
-                    $modalInstance.close([]);
+                    $uibModalInstance.close([]);
                 }
             };
 
@@ -47,7 +47,7 @@
              * EditPopup.cancel dismissed the modal with an error message
              */
             EditPopup.cancel = function () {
-                $modalInstance.dismiss({error: 'Cancelled'});
+                $uibModalInstance.dismiss({error: 'Cancelled'});
             };
             /**
              * EditPopup.removeAllAffectedUrls will remove all affected urls
